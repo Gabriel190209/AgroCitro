@@ -50,11 +50,13 @@
                     const listaIrrigacoesBody = document.getElementById('listaIrrigacoes');
                     listaIrrigacoesBody.innerHTML = '';
 
+                    let contador = 1;
+
                     irrigacoes.forEach(irrigacao => {
                         const row = listaIrrigacoesBody.insertRow();
 
                         let cell = row.insertCell();
-                        cell.textContent = irrigacao.id_agendamento || 'N/A';
+                        cell.textContent = contador++;
                         cell.setAttribute('data-label', 'Código');
 
                         cell = row.insertCell();

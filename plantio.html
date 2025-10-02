@@ -89,11 +89,13 @@
                     const listaPlantiosBody = document.getElementById('listaPlantios');
                     listaPlantiosBody.innerHTML = '';
 
+                    let contador = 1;
+
                     plantios.forEach(plantio => {
                         const row = listaPlantiosBody.insertRow();
                         
                         let cell = row.insertCell();
-                        cell.textContent = plantio.id_plantio || 'N/A';
+                        cell.textContent = contador++;
                         cell.setAttribute('data-label', 'Código');
                         
                         cell = row.insertCell();

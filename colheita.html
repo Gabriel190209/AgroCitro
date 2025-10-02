@@ -55,11 +55,13 @@
                     const listaColheitasBody = document.getElementById('listaColheitas');
                     listaColheitasBody.innerHTML = '';
 
+                    let contador = 1;
+
                     colheitas.forEach(colheita => {
                         const row = listaColheitasBody.insertRow();
 
                         let cell = row.insertCell();
-                        cell.textContent = colheita.id_colheita || 'N/A';
+                        cell.textContent = contador++;
                         cell.setAttribute('data-label', 'Código');
                         
                         const dataColheitaString = colheita.Data_Colheita || colheita.data_colheita;
